@@ -40,7 +40,7 @@ $form_test->add_Widget(new Password('Password : ','passwordInput'));    //$input
 $form_test->add_Widget(new Date('Date : ','dateInput'));    //$input_date = new Date('Date : ','dateInput');
 $form_test->add_Widget(new Texte('Ville', 'villeInput'));
 $form_test->add_Widget(new Texte('Code Postal', 'cpInput'));
-$form_test->add_Widget(new ListeMultiple('Liste VilleMultiple','selectListeMultiple', 6,array('Nantes','Le Mans','Chateaubriant')));
+$form_test->add_Widget(new ListeMultiple('Liste VilleMultiple','selectListeMultiple', 6,array(0=>'Nantes',1=>'Le Mans',2=>'Chateaubriant')));
 $form_test->add_Widget(new ListeSimple('Liste VilleSimple','selectListeSimple', 6,array('Nantes','Le Mans','Chateaubriant')));
 
 //revoir les keys 'nomInput' new ... (...,'nomInput'

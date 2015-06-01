@@ -51,7 +51,7 @@ class Formulaire {
         foreach($this->arrayWidget as $widget){
             $return .= $widget->render_value();
         }
-        $return .= '<br><input type="submit" name"valider" value="ENVOYER"/> </form>';
+        $return .= '<br><input type="submit" name="valider" value="ENVOYER"/> </form>';
         return $return; 
     }
     

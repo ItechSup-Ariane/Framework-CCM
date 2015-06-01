@@ -26,7 +26,7 @@ class ListeSimple extends ListeChoixSimple{
     
     function render(){
         $return ='<label>'.$this->getLabel().'</label><br>
-        <select name="'.$this->getNameInput().'" size="'.$this->sizeSelect.'" ';
+        <select name="'.$this->getNameInput().'" >';
              foreach ($this->valueOption as $value) {
                  $return .= '<option value="'.$value.'">'.$value.'</option>';
              }
