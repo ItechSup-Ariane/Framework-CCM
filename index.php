@@ -10,6 +10,8 @@ use \FrameworkWidget\Classe\Formulaire\Widget\Texte\Password;
 use \FrameworkWidget\Classe\Formulaire\Widget\Texte\Mail;
 //use \FrameworkWidget\Classe\Formulaire\Widget\Texte\Telephone;
 //use \FrameworkWidget\Classe\Formulaire\Widget\Texte\Url;
+use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeMultiple;
+use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeSimple;
 
 spl_autoload_register(function ($class) {
 
@@ -38,6 +40,9 @@ $form_test->add_Widget(new Password('Password : ','passwordInput'));    //$input
 $form_test->add_Widget(new Date('Date : ','dateInput'));    //$input_date = new Date('Date : ','dateInput');
 $form_test->add_Widget(new Texte('Ville', 'villeInput'));
 $form_test->add_Widget(new Texte('Code Postal', 'cpInput'));
+$form_test->add_Widget(new ListeMultiple('Liste VilleMultiple','selectListeMultiple', 6,array('Nantes','Le Mans','Chateaubriant')));
+$form_test->add_Widget(new ListeSimple('Liste VilleSimple','selectListeSimple', 6,array('Nantes','Le Mans','Chateaubriant')));
+
 //revoir les keys 'nomInput' new ... (...,'nomInput'
 //voir avec un get sur le $value du new Texte
 echo $form_test->render_form();
@@ -53,7 +58,7 @@ $form_test->bind($donneeDuPost);
 echo $form_test->renderValue_form();
 
 //echo'tableau post';
-//var_dump($_POST);
+var_dump($_POST);
 //echo'tableau donnee du post';
 //var_dump($donneeDuPost);
 

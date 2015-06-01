@@ -15,6 +15,22 @@
 NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
 use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeChoixSimple;
 
-class ListeSimple {
+class ListeSimple extends ListeChoixSimple{
     //put your code here
+    
+    
+    function __construct($name, $size, $valueOption, $label) {
+        parent::__construct($name, $size, $valueOption, $label);
+        
+    }
+    
+    function render(){
+        $return ='<label>'.$this->getLabel().'</label><br>
+        <select name="'.$this->getNameInput().'" size="'.$this->sizeSelect.'" ';
+             foreach ($this->valueOption as $value) {
+                 $return .= '<option value="'.$value.'">'.$value.'</option>';
+             }
+       $return .='</select><BR>';
+       return $return;
+   }   
 }

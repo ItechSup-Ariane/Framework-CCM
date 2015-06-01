@@ -13,20 +13,21 @@
  */
 
 NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
+use FrameworkWidget\Classe\Formulaire\Widget\Widget;
 
 class Liste extends Widget{
     //put your code here
-    protected $nameSelect;
     protected $sizeSelect;
-    protected $multiple;
-    protected $disabled;
     protected $valueOption;
     
-    function __construct($name,$size,$multiple,$disable,$valueOption) {
-        $this->nameSelect=$name;
+    function __construct($labelName, $nameInput,$size,$valueOption) {
+        parent::__construct($labelName, $nameInput);
         $this->sizeSelect=$size;
-        $this->multiple=$multiple;
-        $this->disabled=$disable;
         $this->valueOption=$valueOption;
     }
+    
+    function render() {
+        parent::render();
+    }
+    
 }
