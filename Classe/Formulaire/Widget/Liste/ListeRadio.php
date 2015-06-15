@@ -1,6 +1,6 @@
 <?php
 
-NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
+namespace FrameworkWidget\Classe\Formulaire\Widget\Liste;
 
 use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeChoixSimple;
 
@@ -23,7 +23,7 @@ class ListeRadio extends ListeChoixSimple
      * @param type $valueOption
      * @param type $label
      */
-    function __construct($name, $size, $valueOption, $label)
+    public function __construct($name, $size, $valueOption, $label)
     {
         parent::__construct($name, $size, $valueOption, $label);
     }

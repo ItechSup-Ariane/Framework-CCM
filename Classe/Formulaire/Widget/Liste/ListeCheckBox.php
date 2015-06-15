@@ -1,6 +1,6 @@
 <?php
 
-NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
+namespace FrameworkWidget\Classe\Formulaire\Widget\Liste;
 
 use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeChoixSimple;
 

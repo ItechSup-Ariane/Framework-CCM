@@ -1,6 +1,6 @@
 <?php
 
-NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Texte;
+namespace FrameworkWidget\Classe\Formulaire\Widget\Texte;
 
 use FrameworkWidget\Classe\Formulaire\Widget\Texte\Entier;
 
@@ -21,7 +21,7 @@ class CodePostal extends Entier
      * @param type $labelName
      * @param type $nameInput
      */
-    function __construct($labelName, $nameInput)
+    public function __construct($labelName, $nameInput)
     {
         parent::__construct($labelName, $nameInput);
     }
@@ -31,7 +31,7 @@ class CodePostal extends Entier
      * @param int $codePostalInt
      * @return type
      */
-    function convertString(int $codePostalInt)
+    protected function convertString(int $codePostalInt)
     {
         $codePostalString = (string) $codePostalInt;
         return $codePostalString;

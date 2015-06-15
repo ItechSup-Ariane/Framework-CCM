@@ -1,6 +1,6 @@
 <?php
 
-NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
+namespace FrameworkWidget\Classe\Formulaire\Widget\Liste;
 
 use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeChoixMultiple;
 
@@ -25,7 +25,7 @@ class ListeMultiple extends ListeChoixMultiple
      * @param type $valueOption is an associative array key => value
      * @param type $label
      */
-    function __construct($name, $size, $valueOption, $label)
+    public function __construct($name, $size, $valueOption, $label)
     {
         parent::__construct($name, $size, $valueOption, $label);
     }
@@ -34,7 +34,7 @@ class ListeMultiple extends ListeChoixMultiple
      *
      * @return the html code for the widget with its value
      */
-    function render()
+    protected function render()
     {
         $return = '<label>' . $this->getLabel() . '</label><br>
         <select name="' . $this->getNameInput() . '[]" size="' . $this->sizeSelect . '" multiple="' . $this->multiple . '" >';
@@ -49,7 +49,7 @@ class ListeMultiple extends ListeChoixMultiple
      * 
      * @return the html code for the widget without its value
      */
-    function render_value()
+    protected function render_value()
     {
         $return = '<label>' . $this->getLabel() . '</label><br>
         <select name="' . $this->getNameInput() . '[]" size="' . $this->sizeSelect . '" multiple="' . $this->multiple . '" >';
@@ -68,7 +68,7 @@ class ListeMultiple extends ListeChoixMultiple
      * the bind function assigns field values ​​entered by the user to their widget
      * @param type $value
      */
-    function bind($value)
+    protected function bind($value)
     {
         $this->userValue = $value;
     }

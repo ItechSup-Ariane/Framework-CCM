@@ -1,6 +1,6 @@
 <?php
 
-NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Texte;
+namespace FrameworkWidget\Classe\Formulaire\Widget\Texte;
 
 use FrameworkWidget\Classe\Formulaire\Widget\Widget;
 
@@ -21,7 +21,7 @@ class Texte extends Widget
      * @param type $labelName
      * @param type $nameInput
      */
-    function __construct($labelName, $nameInput)
+    public function __construct($labelName, $nameInput)
     {
         parent::__construct($labelName, $nameInput);
     }

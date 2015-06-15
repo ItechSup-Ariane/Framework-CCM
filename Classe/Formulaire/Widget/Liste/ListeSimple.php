@@ -1,6 +1,6 @@
 <?php
 
-NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
+namespace FrameworkWidget\Classe\Formulaire\Widget\Liste;
 
 use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeChoixSimple;
 
@@ -18,12 +18,12 @@ class ListeSimple extends ListeChoixSimple
      * @param type $valueOption
      * @param type $label
      */
-    function __construct($name, $size, $valueOption, $label)
+    public function __construct($name, $size, $valueOption, $label)
     {
         parent::__construct($name, $size, $valueOption, $label);
     }
 
-    function render()
+    protected function render()
     {
         $return = '<label>' . $this->getLabel() . '</label><br>
         <select name="' . $this->getNameInput() . '" >';

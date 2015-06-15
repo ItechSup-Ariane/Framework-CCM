@@ -1,6 +1,6 @@
 <?php
 
-NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
+namespace FrameworkWidget\Classe\Formulaire\Widget\Liste;
 
 use FrameworkWidget\Classe\Formulaire\Widget\Widget;
 
@@ -25,7 +25,7 @@ class Liste extends Widget
      * @param type $size
      * @param type $valueOption
      */
-    function __construct($labelName, $nameInput, $size, $valueOption)
+    public function __construct($labelName, $nameInput, $size, $valueOption)
     {
         parent::__construct($labelName, $nameInput);
         $this->sizeSelect = $size;
@@ -35,7 +35,7 @@ class Liste extends Widget
     /**
      * render of widget extends from widget class
      */
-    function render()
+    protected function render()
     {
         parent::render();
     }

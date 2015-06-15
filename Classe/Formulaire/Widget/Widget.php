@@ -1,6 +1,6 @@
 <?php
 
-NAMESPACE FrameworkWidget\Classe\Formulaire\Widget;
+namespace FrameworkWidget\Classe\Formulaire\Widget;
 
 /**
  * Class WIDGET
@@ -25,7 +25,7 @@ abstract class Widget
      * @param type $labelName
      * @param type $nameInput
      */
-    function __construct($labelName, $nameInput)
+    public function __construct($labelName, $nameInput)
     {
         $this->label = $labelName;
         $this->nameInput = $nameInput;
@@ -91,7 +91,7 @@ abstract class Widget
      * the bind function assigns field values ​​entered by the user to their widget
      * @param type $value
      */
-    function bind($value)
+    protected function bind($value)
     {
         $this->userValue = $value;
     }

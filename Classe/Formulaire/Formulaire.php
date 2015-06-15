@@ -27,7 +27,7 @@ class Formulaire
      * @param type $action_form
      * @param type $name_form
      */
-    function __construct($method_form, $action_form, $name_form)
+    public function __construct($method_form, $action_form, $name_form)
     {
         $this->method = $method_form;
         $this->action = $action_form;
@@ -38,7 +38,7 @@ class Formulaire
      * function add_widget completed the table arrayWidget
      * @param type $value
      */
-    function add_Widget($value)
+    protected function add_Widget($value)
     {
         $this->arrayWidget[$value->getNameInput()] = $value;
     }
@@ -47,7 +47,7 @@ class Formulaire
      * the html code for the form without its value
      * @return string
      */
-    public function render_form()
+    protected function render_form()
     {
         $return = '<form method="' . $this->method . '" '
                 . 'action="' . $this->action . '" '
@@ -63,7 +63,7 @@ class Formulaire
      * the bind function assigns field values ​​entered by the user to their widget
      * @param type $donneePost
      */
-    function bind($donneePost)
+    protected function bind($donneePost)
     {
         foreach ($donneePost as $key => $value) {
             $this->arrayWidget[$key]->bind($value);
@@ -74,7 +74,7 @@ class Formulaire
      * 
      * @return the html code for the widget with its value
      */
-    public function renderValue_form()
+    protected function renderValue_form()
     {
         $return = '<form method="' . $this->method . '" '
                 . 'action="' . $this->action . '" '
@@ -90,7 +90,7 @@ class Formulaire
      * 
      * @return arrayWidget
      */
-    public function getArrayWidget()
+    protected function getArrayWidget()
     {
         return $this->arrayWidget;
     }
