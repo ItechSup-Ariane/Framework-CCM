@@ -9,7 +9,7 @@ NAMESPACE FrameworkWidget\Classe\Formulaire\Widget;
  * <li>protected $label : input's label, it's the text before input </li>
  * <li>protected $name : input's name </li>
  * <li>protected $type : input's type</li>
- * <li>protected $valueUtilisateur : input's value, value is null when the constructor is call</li>
+ * <li>protected $userValue : input's value, value is null when the constructor is call</li>
  * </ul>
  */
 abstract class Widget

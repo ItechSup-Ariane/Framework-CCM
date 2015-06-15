@@ -4,20 +4,36 @@ NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
 
 use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeChoixMultiple;
 
+/**
+ * Class ListeMultiple
+ * 
+ * <ul>
+ * <li>@var protected $multiple : define if the select is multiple or not </li>
+ * <li>@var protected $userValue : input's value, value is null when the constructor is call, here its a table of value</li>
+ * </ul>
+ */
 class ListeMultiple extends ListeChoixMultiple
 {
 
     protected $multiple = 'multiple';
-    protected $valueUtilisateur = array();
+    protected $userValue = array();
 
-    //valueOption est un tableau de Key=>value
-    //constructeur du widget
+    /**
+     * __construct function
+     * @param type $name
+     * @param type $size
+     * @param type $valueOption is an associative array key => value
+     * @param type $label
+     */
     function __construct($name, $size, $valueOption, $label)
     {
         parent::__construct($name, $size, $valueOption, $label);
     }
 
-    //affichage du widget/formulaire sans la donnée valueUtilisateur bind
+    /**
+     *
+     * @return the html code for the widget with its value
+     */
     function render()
     {
         $return = '<label>' . $this->getLabel() . '</label><br>
@@ -29,13 +45,16 @@ class ListeMultiple extends ListeChoixMultiple
         return $return;
     }
 
-    //affichage du widget/formulaire avec la donnée valueUtilisateur bind
+    /**
+     * 
+     * @return the html code for the widget without its value
+     */
     function render_value()
     {
         $return = '<label>' . $this->getLabel() . '</label><br>
         <select name="' . $this->getNameInput() . '[]" size="' . $this->sizeSelect . '" multiple="' . $this->multiple . '" >';
         foreach ($this->valueOption as $key => $value) {
-            foreach ($this->valueUtilisateur as $key2 => $value2) {
+            foreach ($this->userValue as $key2 => $value2) {
                 if ($key == $value2) {
                     $return .= '<option  value="" selected>' . $value . '</option>';
                 }
@@ -45,10 +64,13 @@ class ListeMultiple extends ListeChoixMultiple
         return $return;
     }
 
-    //attribut la valeur du formulaire à l'attribut 
+    /**
+     * the bind function assigns field values ​​entered by the user to their widget
+     * @param type $value
+     */
     function bind($value)
     {
-        $this->valueUtilisateur = $value;
+        $this->userValue = $value;
     }
 
 }

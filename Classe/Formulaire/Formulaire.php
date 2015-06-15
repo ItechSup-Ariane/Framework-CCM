@@ -12,7 +12,6 @@ namespace FrameworkWidget\Classe\Formulaire;
  * <li>protected $arrayWidget : Table widget , filled with the add_widget () function</li>
  * </ul>
  */
-
 class Formulaire
 {
 

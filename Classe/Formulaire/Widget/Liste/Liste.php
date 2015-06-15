@@ -4,6 +4,14 @@ NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
 
 use FrameworkWidget\Classe\Formulaire\Widget\Widget;
 
+/**
+ * Class Liste
+ * 
+ * <ul>
+ * <li>@var protected $sizeSelect : select's size </li>
+ * <li>@var protected $valueOption : table of option </li>
+ * </ul>
+ */
 class Liste extends Widget
 {
 
@@ -25,7 +33,7 @@ class Liste extends Widget
     }
 
     /**
-     * render of widget
+     * render of widget extends from widget class
      */
     function render()
     {

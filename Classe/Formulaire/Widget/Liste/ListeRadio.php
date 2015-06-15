@@ -1,28 +1,28 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of ListeRadio
- *
- * @author Corentin
- */
-
 NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
 
 use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeChoixSimple;
 
+/**
+ * Class ListeRadio
+ * 
+ * <ul>
+ * <li>protected $typeInput : widget's type</li>
+ * </ul>
+ */
 class ListeRadio extends ListeChoixSimple
 {
 
-    //put your code here
-
     protected $typeInput = 'radio';
 
+    /**
+     * __construct function
+     * @param type $name
+     * @param type $size
+     * @param type $valueOption
+     * @param type $label
+     */
     function __construct($name, $size, $valueOption, $label)
     {
         parent::__construct($name, $size, $valueOption, $label);
