@@ -1,16 +1,17 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
 
-/**
- * Description of ListeCheckBox
- *
- * @author Corentin
- */
-class ListeCheckBox {
-    //put your code here
+use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeChoixSimple;
+
+class ListeCheckBox extends ListeChoixSimple
+{
+
+    protected $typeInput = 'check';
+
+    function __construct($name, $size, $valueOption, $label)
+    {
+        parent::__construct($name, $size, $valueOption, $label);
+    }
+
 }

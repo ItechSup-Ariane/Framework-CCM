@@ -31,17 +31,17 @@ spl_autoload_register(function ($class) {
     }
 });
 
-$form_test= new Formulaire('POST','','form1');
+$form_test = new Formulaire('POST', '', 'form1');
 
-$form_test->add_Widget(new Texte('Nom : ','nomInput')); // $input_nom = new Texte('Nom : ','nomInput');           
-$form_test->add_Widget(new Texte('Prenom : ','prenomInput'));    //$input_prenom = new Texte('Prenom : ','prenomInput');                
-$form_test->add_Widget(new Mail('Mail : ','mailInput'));    //$input_mail = new Mail('Mail : ','mailInput');                
-$form_test->add_Widget(new Password('Password : ','passwordInput'));    //$input_password = new Password('Password : ','passwordInput');
-$form_test->add_Widget(new Date('Date : ','dateInput'));    //$input_date = new Date('Date : ','dateInput');
+$form_test->add_Widget(new Texte('Nom : ', 'nomInput')); // $input_nom = new Texte('Nom : ','nomInput');           
+$form_test->add_Widget(new Texte('Prenom : ', 'prenomInput'));    //$input_prenom = new Texte('Prenom : ','prenomInput');                
+$form_test->add_Widget(new Mail('Mail : ', 'mailInput'));    //$input_mail = new Mail('Mail : ','mailInput');                
+$form_test->add_Widget(new Password('Password : ', 'passwordInput'));    //$input_password = new Password('Password : ','passwordInput');
+$form_test->add_Widget(new Date('Date : ', 'dateInput'));    //$input_date = new Date('Date : ','dateInput');
 $form_test->add_Widget(new Texte('Ville', 'villeInput'));
 $form_test->add_Widget(new Texte('Code Postal', 'cpInput'));
-$form_test->add_Widget(new ListeMultiple('Liste VilleMultiple','selectListeMultiple', 6,array(0=>'Nantes',1=>'Le Mans',2=>'Chateaubriant')));
-$form_test->add_Widget(new ListeSimple('Liste VilleSimple','selectListeSimple', 6,array('Nantes','Le Mans','Chateaubriant')));
+$form_test->add_Widget(new ListeMultiple('Liste VilleMultiple', 'selectListeMultiple', 6, array(0 => 'Nantes', 1 => 'Le Mans', 2 => 'Chateaubriant')));
+$form_test->add_Widget(new ListeSimple('Liste VilleSimple', 'selectListeSimple', 6, array('Nantes', 'Le Mans', 'Chateaubriant')));
 
 //revoir les keys 'nomInput' new ... (...,'nomInput'
 //voir avec un get sur le $value du new Texte
@@ -49,20 +49,19 @@ echo $form_test->render_form();
 //echo'tableau arrayWidget avant $_Post';
 //var_dump($form_test->getArrayWidget());
 
-$donneeDuPost=array();
-foreach($_POST as $key=>$value){    
-    $donneeDuPost=$_POST;
+$donneeDuPost = array();
+foreach ($_POST as $key => $value) {
+    $donneeDuPost = $_POST;
 }
-
-$form_test->bind($donneeDuPost);
-echo $form_test->renderValue_form();
-
-//echo'tableau post';
+echo'tableau post';
 var_dump($_POST);
 //echo'tableau donnee du post';
 //var_dump($donneeDuPost);
 
+$form_test->bind($donneeDuPost);
+echo $form_test->renderValue_form();
+
+//var_dump($form_test->bind($donneeDuPost));
+
 //echo'tableau arrayWidget après $_Post';
 //var_dump($form_test->getArrayWidget());
-
-            

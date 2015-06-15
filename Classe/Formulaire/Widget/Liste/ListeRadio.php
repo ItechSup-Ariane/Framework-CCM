@@ -13,8 +13,19 @@
  */
 
 NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Liste;
+
 use FrameworkWidget\Classe\Formulaire\Widget\Liste\ListeChoixSimple;
 
-class ListeRadio {
+class ListeRadio extends ListeChoixSimple
+{
+
     //put your code here
+
+    protected $typeInput = 'radio';
+
+    function __construct($name, $size, $valueOption, $label)
+    {
+        parent::__construct($name, $size, $valueOption, $label);
+    }
+
 }

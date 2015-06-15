@@ -1,60 +1,99 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of widget
- *avoir une variable par fille widget type
- * 
- * @author Corentin
- */
 NAMESPACE FrameworkWidget\Classe\Formulaire\Widget;
 
-abstract class Widget {
-    
+/**
+ * Class WIDGET
+ * 
+ * <ul>
+ * <li>protected $label : input's label, it's the text before input </li>
+ * <li>protected $name : input's name </li>
+ * <li>protected $type : input's type</li>
+ * <li>protected $valueUtilisateur : input's value, value is null when the constructor is call</li>
+ * </ul>
+ */
+abstract class Widget
+{
+
     protected $label;
     protected $nameInput;
     protected $typeInput;
-    protected $valueUtilisateur="";//bind qui donne la valeur
-    
-            
-    function __construct($labelName,$nameInput) {
-        $this->label=$labelName;
-        $this->nameInput=$nameInput;
+    protected $userValue = "";
+
+    /**
+     * __construct function
+     * @param type $labelName
+     * @param type $nameInput
+     */
+    function __construct($labelName, $nameInput)
+    {
+        $this->label = $labelName;
+        $this->nameInput = $nameInput;
     }
-    public function getLabel() {
+
+    /**
+     * 
+     * @return label
+     */
+    public function getLabel()
+    {
         return $this->label;
     }
 
-    public function getNameInput() {
+    /**
+     * 
+     * @return name
+     */
+    public function getNameInput()
+    {
         return $this->nameInput;
     }
 
-    public function getTypeInput() {
+    /**
+     * 
+     * @return type
+     */
+    public function getTypeInput()
+    {
         return $this->typeInput;
     }
 
-    public function getValueUtilisateur() {
-        return $this->valueUtilisateur;
+    /**
+     * 
+     * @return value
+     */
+    public function getUserValue()
+    {
+        return $this->userValue;
     }
 
-    public function render(){
-        //renvoi le html du widget
-       return '<label>'.$this->label.'</label><br>
-        <input type="'.$this->typeInput.'" name="'.$this->nameInput.'"/><br>'; 
+    /**
+     * 
+     * @return the html code for the widget without its value
+     */
+    public function render()
+    {
+        return '<label>' . $this->label . '</label><br>
+        <input type="' . $this->typeInput . '" name="' . $this->nameInput . '"/><br>';
     }
-    
-    public function render_value(){
-        //renvoi le html du widget
-       return '<label>'.$this->label.'</label><br>
-        <input type="'.$this->typeInput.'" name="'.$this->nameInput.'" value="'.$this->valueUtilisateur.'"/><br>'; 
+
+    /**
+     * 
+     * @return the html code for the widget with its value
+     */
+    public function render_value()
+    {
+        return '<label>' . $this->label . '</label><br>
+        <input type="' . $this->typeInput . '" name="' . $this->nameInput . '" value="' . $this->userValue . '"/><br>';
     }
-   //faire un bind widget
-    function bind($value){
-        $this->valueUtilisateur = $value;
+
+    /**
+     * the bind function assigns field values ​​entered by the user to their widget
+     * @param type $value
+     */
+    function bind($value)
+    {
+        $this->userValue = $value;
     }
+
 }

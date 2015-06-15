@@ -1,30 +1,40 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of CodePostal
- *
- * @author Corentin
- */
 NAMESPACE FrameworkWidget\Classe\Formulaire\Widget\Texte;
+
 use FrameworkWidget\Classe\Formulaire\Widget\Texte\Entier;
 
-class CodePostal extends Entier{
-    //put your code here
-    
-    protected $typeInput='entier';
-    
-    function __construct($labelName, $nameInput) {
+/**
+ * Class CODE POSTAL
+ * 
+ * <ul>
+ * <li>protected $typeInput : widget's type </li>
+ * </ul>
+ */
+class CodePostal extends Entier
+{
+
+    protected $typeInput = 'entier';
+
+    /**
+     * __construct function
+     * @param type $labelName
+     * @param type $nameInput
+     */
+    function __construct($labelName, $nameInput)
+    {
         parent::__construct($labelName, $nameInput);
     }
-    
-    function convertString(int $codePostalInt){
+
+    /**
+     * convert the int value in a string value
+     * @param int $codePostalInt
+     * @return type
+     */
+    function convertString(int $codePostalInt)
+    {
         $codePostalString = (string) $codePostalInt;
         return $codePostalString;
     }
+
 }
