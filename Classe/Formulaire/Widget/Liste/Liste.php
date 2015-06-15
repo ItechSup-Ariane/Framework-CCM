@@ -35,7 +35,7 @@ class Liste extends Widget
     /**
      * render of widget extends from widget class
      */
-    protected function render()
+    public function render()
     {
         parent::render();
     }

@@ -26,7 +26,7 @@ class ListeChoixSimple extends Liste
     /**
      * render of widget extends from liste
      */
-    protected function render()
+    public function render()
     {
         parent::render();
     }

@@ -34,7 +34,7 @@ class ListeMultiple extends ListeChoixMultiple
      *
      * @return the html code for the widget with its value
      */
-    protected function render()
+    public function render()
     {
         $return = '<label>' . $this->getLabel() . '</label><br>
         <select name="' . $this->getNameInput() . '[]" size="' . $this->sizeSelect . '" multiple="' . $this->multiple . '" >';
@@ -49,7 +49,7 @@ class ListeMultiple extends ListeChoixMultiple
      * 
      * @return the html code for the widget without its value
      */
-    protected function render_value()
+    public function render_value()
     {
         $return = '<label>' . $this->getLabel() . '</label><br>
         <select name="' . $this->getNameInput() . '[]" size="' . $this->sizeSelect . '" multiple="' . $this->multiple . '" >';

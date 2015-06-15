@@ -38,7 +38,7 @@ class Formulaire
      * function add_widget completed the table arrayWidget
      * @param type $value
      */
-    protected function add_Widget($value)
+    public function add_Widget($value)
     {
         $this->arrayWidget[$value->getNameInput()] = $value;
     }

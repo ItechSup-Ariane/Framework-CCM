@@ -23,7 +23,7 @@ class ListeSimple extends ListeChoixSimple
         parent::__construct($name, $size, $valueOption, $label);
     }
 
-    protected function render()
+    public function render()
     {
         $return = '<label>' . $this->getLabel() . '</label><br>
         <select name="' . $this->getNameInput() . '" >';
