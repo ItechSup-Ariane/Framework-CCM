@@ -53,8 +53,8 @@ $donneeDuPost = array();
 foreach ($_POST as $key => $value) {
     $donneeDuPost = $_POST;
 }
-echo'tableau post';
-var_dump($_POST);
+//echo'tableau post';
+//var_dump($_POST);
 //echo'tableau donnee du post';
 //var_dump($donneeDuPost);
 

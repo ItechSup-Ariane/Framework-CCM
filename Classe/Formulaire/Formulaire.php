@@ -47,7 +47,7 @@ class Formulaire
      * the html code for the form without its value
      * @return string
      */
-    protected function render_form()
+    public function render_form()
     {
         $return = '<form method="' . $this->method . '" '
                 . 'action="' . $this->action . '" '
@@ -63,7 +63,7 @@ class Formulaire
      * the bind function assigns field values ​​entered by the user to their widget
      * @param type $donneePost
      */
-    protected function bind($donneePost)
+    public function bind($donneePost)
     {
         foreach ($donneePost as $key => $value) {
             $this->arrayWidget[$key]->bind($value);
@@ -74,7 +74,7 @@ class Formulaire
      * 
      * @return the html code for the widget with its value
      */
-    protected function renderValue_form()
+    public function renderValue_form()
     {
         $return = '<form method="' . $this->method . '" '
                 . 'action="' . $this->action . '" '
