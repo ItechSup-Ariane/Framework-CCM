@@ -30,7 +30,7 @@ class ListeSimple extends ListeChoixSimple
         foreach ($this->valueOption as $value) {
             $return .= '<option value="' . $value . '">' . $value . '</option>';
         }
-        $return .='</select><BR>';
+        $return .='</select><BR/>';
         return $return;
     }
 

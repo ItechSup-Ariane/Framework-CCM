@@ -90,7 +90,7 @@ class Formulaire
      * 
      * @return arrayWidget
      */
-    protected function getArrayWidget()
+    public function getArrayWidget()
     {
         return $this->arrayWidget;
     }

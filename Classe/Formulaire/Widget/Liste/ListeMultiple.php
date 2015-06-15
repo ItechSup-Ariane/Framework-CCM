@@ -68,9 +68,9 @@ class ListeMultiple extends ListeChoixMultiple
      * the bind function assigns field values ​​entered by the user to their widget
      * @param type $value
      */
-    public function bind($value)
-    {
-        $this->userValue = $value;
-    }
+//    public function bind($value)
+//    {
+//        $this->userValue = $value;
+//    }
 
 }
